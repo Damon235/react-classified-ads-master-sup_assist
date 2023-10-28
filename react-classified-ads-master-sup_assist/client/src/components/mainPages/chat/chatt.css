@@ -1,0 +1,115 @@
+.Chat {
+    position: relative;
+    display: grid;
+    grid-template-columns: 22% auto;
+    gap: 1rem;
+  }
+  
+  .Left-side-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(45, 44, 44);
+  }
+  
+  .Chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+    height: auto;
+    min-height: 80vh;
+    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .Chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .Right-side-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .conversation:hover {
+    background: #80808038;
+    cursor: pointer;
+  }
+  
+  .conversation {
+    border-radius: 0.5rem;
+    padding: 10px;
+  }
+  
+  .conversation > div {
+    position: relative;
+  }
+  
+  .online-dot {
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: absolute;
+    left: 2rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  
+  .chatbox-empty-message {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+   .Chat {
+      grid-template-columns: 16% auto;
+    }
+     .follower.conversation>div>.name{
+      display: none;
+     }
+  }
+
+  @media screen and (max-width: 768px) {
+    .Chat {
+      grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+  
+    .Left-side-chat {
+      order: 2; /* Move to the bottom for mobile layout */
+      background-color: #2d2c2c; /* or any color suitable for mobile view */
+    }
+  
+    .Chat-container {
+      min-height: 100vh; /* Full height for smaller screens */
+      overflow-y: auto; /* Enable vertical scrolling */
+    }
+  
+    .Chat-list {
+      padding: 1rem; /* Adjust padding for mobile view */
+    }
+  
+    .Right-side-chat {
+      order: 1; /* Move to the top for mobile layout */
+    }
+  
+    .conversation {
+      padding: 1rem; /* Add padding to each conversation for better spacing */
+    }
+  
+    .name {
+      font-size: 1rem; /* Adjust font size for mobile view */
+    }
+  
+    .online-dot {
+      left: 1rem; /* Adjust position for mobile view */
+    }
+  }

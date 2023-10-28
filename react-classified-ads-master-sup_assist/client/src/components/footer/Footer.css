@@ -1,0 +1,64 @@
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: black;
+  z-index: 1000; /* Change z-index to make sure it's above other content */
+}
+
+.footer-text, .footer-text a {
+  color: #f7f78d;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-text a {
+  border-bottom: 1px solid #f7f78d;
+  text-decoration: none; /* Remove underline */
+  transition: border-color 0.3s ease-in-out; /* Add transition effect */
+}
+
+.footer-text a:hover {
+  border-bottom-color: transparent; /* Change border color on hover */
+}
+
+.social-icon {
+  width: 100px;
+}
+
+.social-icon ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0; /* Remove default padding */
+}
+
+.social-icon li {
+  list-style: none; /* Remove default list style */
+  transition: transform 0.3s ease-in-out; /* Add transform transition */
+}
+
+.social-icon svg {
+  fill: #f7f78d;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.social-icon li:hover {
+  transform: translateY(-3px); /* Add translateY on hover */
+}
+
+h5 {
+  font-size: 1.1rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin: 1px 0; /* Adjust the margins as needed */
+  color: #333; /* Set the text color */
+}

@@ -1,0 +1,30 @@
+/* Regular styles for the NavigationBar */
+.navigation-bar {
+  display: none; /* Hide the NavigationBar by default */
+  flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+  justify-content: center; /* Center items horizontally */
+  padding: 10px;
+  /* ... other styles ... */
+}
+
+/* Style each category container */
+.cat {
+  flex-basis: 25%; /* Each category takes up 25% of the available space */
+  padding: 5px; /* Add some spacing around each category */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Style the navigation image */
+.nav-image {
+  max-width: 100%; /* Ensure the image does not exceed its container's width */
+  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Remove any extra spacing around the image */
+  border: 1px solid #ccc; /* Add a border to the image */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.cat:hover .nav-image {
+  background-color: #e0e0e0;
+}

@@ -1,0 +1,90 @@
+.filter_menu {
+  background-color: rgba(0, 0, 0, 1);
+  /* padding-top: 10px;
+    padding-bottom: 10px; */
+}
+
+.filter_menu .filter-row {
+  padding: 5px 10px; /* Adjust padding for smaller spacing */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Allow items to wrap to a new line */
+}
+
+.filter_menu .filter-row span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white;
+  margin: 5px 15px; /* Adjust margin for smaller spacing */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.filter_menu .filter-row span:first-child {
+  margin-left: 0;
+}
+
+.filter_menu .filter-row span:hover {
+  border-bottom: 1px solid white;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5px 10px; /* Adjust padding for smaller spacing */
+  padding-top: 0;
+}
+
+.search-box select,
+option {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  outline: none;
+}
+
+.search-box select {
+  min-width: 100px;
+  padding: 5px;
+  height: 30px; /* Reduce height for smaller screens */
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.search-box select option {
+  color: black;
+  padding-top: 5px; /* Adjust padding for smaller spacing */
+}
+
+.search-box input {
+  border: none;
+  flex: 1;
+  outline: none;
+  margin-right: 10px; /* Adjust margin for smaller spacing */
+  height: 30px; /* Reduce height for smaller screens */
+  padding: 0 10px; /* Adjust padding for smaller spacing */
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+@media screen and (max-width: 446px) {
+  .search-box select {
+    display: none;
+  }
+  .search-box input {
+    margin-right: 0px;
+  }
+}

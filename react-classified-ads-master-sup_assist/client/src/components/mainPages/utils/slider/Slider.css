@@ -1,0 +1,63 @@
+.slider-body {
+  height: 300px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 300px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.slider img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.slider-body .left,
+.slider-body .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: transparent;
+  height: 50px; /* Adjust the height as needed */
+  width: 50px; /* Adjust the width as needed */
+  fill: black;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* Make it a circular shape */
+}
+
+.slider-body .left {
+  top: 110px;
+  left: 10px; /* Adjust the left position as needed */
+  padding: 0;
+}
+
+.slider-body .right {
+  top: 110px;
+  right: 10px; /* Adjust the right position as needed */
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .slider-body .left,
+  .slider-body .right {
+    height: 40px; /* Adjust the height as needed */
+    width: 40px; /* Adjust the width as needed */
+  }
+}
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+.lastSlide {
+  transform: translateX(-100%);
+}
+.nextSlide {
+  transform: translateX(100%);
+}
