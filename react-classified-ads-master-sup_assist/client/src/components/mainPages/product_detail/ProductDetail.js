@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { GlobalState } from "../../../globalState";
 import Star from "../../../icons/star.svg";
 import ProductItem from "../utils/product_item/ProductItem";
-import { createChat } from "../../../api/ChatReq";
+import { createChat, fetchConversation } from "../../../api/ChatReq";
 
 export default function ProductDetail() {
   const params = useParams();
@@ -34,6 +34,7 @@ export default function ProductDetail() {
   const handleChatWithSeller = async () => {
     const senderId = currentUser;
     const receiverId = productDetail.seller_id;
+  
     try {
       const response = await createChat(senderId, receiverId);
       state.setCurrentChat(response.data);
@@ -42,6 +43,8 @@ export default function ProductDetail() {
       console.error(error);
     }
   };
+  
+
 
   console.log("Current User: ", currentUser)
 
